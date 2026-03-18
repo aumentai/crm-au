@@ -1,19 +1,41 @@
-export default function Home() {
+export default function RootLayout({ children }) {
   return (
-    <main style={{ padding: "40px", fontFamily: "Arial" }}>
-      <h1>CRM AUMENTAI 🚀</h1>
+    <html lang="pt-br">
+      <body style={{ margin: 0, fontFamily: "Arial" }}>
+        <div style={{ display: "flex", height: "100vh" }}>
+          
+          {/* SIDEBAR */}
+          <aside
+            style={{
+              width: "220px",
+              background: "#111",
+              color: "#fff",
+              padding: "20px",
+            }}
+          >
+            <h2>AUMENTAI</h2>
 
-      <p>Seu sistema já está no ar.</p>
+            <nav style={{ marginTop: "30px" }}>
+              <p>Dashboard</p>
+              <p>Leads</p>
+              <p>Clientes</p>
+              <p>Configurações</p>
+            </nav>
+          </aside>
 
-      <div style={{ marginTop: "30px" }}>
-        <button style={{ marginRight: "10px" }}>
-          Novo Lead
-        </button>
+          {/* CONTEÚDO */}
+          <main
+            style={{
+              flex: 1,
+              background: "#f5f5f5",
+              padding: "30px",
+            }}
+          >
+            {children}
+          </main>
 
-        <button>
-          Ver Leads
-        </button>
-      </div>
-    </main>
+        </div>
+      </body>
+    </html>
   );
 }
