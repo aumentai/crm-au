@@ -1,15 +1,6 @@
-export const metadata = {
-  title: "CRM IA",
-  description: "CRM com inteligência artificial",
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-br">
       <body>{children}</body>
     </html>
   );
